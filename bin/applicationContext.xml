@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    
+    <!--  
+    <bean id="mysport" class="com.spring.Football" ></bean>
+     -->
+     
+     
+     
+     <!-- use constructor arg  
+     <bean id ="user" class="com.spring.di.User">
+     <constructor-arg ref="person"></constructor-arg>
+     </bean>
+       
+     <bean id ="person" class="com.spring.di.Person"></bean>
+     -->
+    
+     
+	<context:property-placeholder location="data.properties"/>   <!-- البديل بتاعه ف كود الجافا اعمل @properitysource("classpath.data.properties") -->
+	
+	
+		<!--setter and getter -->     
+     
+     <bean id ="user" class="com.spring.di.User"  init-method="doStart" destroy-method="doEnd">
+     <property name="p" ref="person"></property>   <!-- put name of set method but remove set(setP) and put next name with first char small name="p" -->
+    
+     <property name="email" value="mohammed2781997@gmail.com"></property>
+     <property name="team" value="Computer Science"></property>
+     <property name="id" value="${us.id}"></property>
+     <property name="name" value="${us.name}"></property>
+     </bean>
+     
+     
+     <bean id ="person" class="com.spring.di.Person"></bean>
+     
+    
+     
+</beans>

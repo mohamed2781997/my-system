@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- inversion of control  
+    <bean id="mypro" class="test.Welcom"></bean>
+	 <bean id="per" class="test.Person"></bean>
+	-->
+	
+	 
+	<!-- constructor injection 
+    <bean id="kan" class="test.Welcom">
+    <constructor-arg ref="par"></constructor-arg>
+    </bean>
+	 <bean id="par" class="test.Person"></bean>
+    -->
+    
+    
+    
+    
+      
+    <!-- setter injection  -->  
+    <!-- <bean id="mywelcome" class="test.Welcom">
+		<property name="personal" ref="mypers"></property>--> <!-- اسم الداله باخد اللى بعد ال سيت ويكون اول حرف سمول -->
+    <!--  </bean>   
+	 <bean id="mypers" class="test.Person"></bean>
+	 -->
+	 
+	 
+	 <!-- inject properity -->
+	 <!--  <bean id="welcomes" class="test.Welcom">
+		<property name="email" value="mohammed2781997@gmail.com"></property>
+		<property name="name" value="mohammed magdy gouda ahmed"></property>
+      </bean>   
+	 <bean id="mypers" class="test.Person"></bean>
+	 -->
+	 
+	 
+	 
+	 
+	 
+        </beans>
+    
+    
+    
